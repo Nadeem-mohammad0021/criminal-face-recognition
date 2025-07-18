@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Face Recognition System</h1>
+        <div class="camera-section">
+            <video id="video" autoplay playsinline></video>
+            <canvas id="canvas"></canvas>
+            <div class="controls">
+                <button id="startCamera">Start Camera</button>
+                <button id="stopCamera" disabled>Stop Camera</button>
+                <button id="captureImage" disabled>Capture Image</button>
+            </div>
+        </div>
+        <div class="results-section">
+            <h2>Detection Results</h2>
+            <div id="resultsContainer"></div>
+        </div>
+        <div class="database-section">
+            <h2>Database</h2>
+            <div id="databaseContainer"></div>
+            <input type="file" id="imageUpload" accept="image/*">
+            <input type="text" id="personName" placeholder="Person's Name">
+            <select id="personStatus">
+                <option value="safe">Safe</option>
+                <option value="criminal">Criminal</option>
+            </select>
+            <button id="addToDB">Add to Database</button>
+        </div>
+    </div>
+    <audio id="alarmSound" src="alarm.mp3"></audio>
+    <script src="script.js"></script>
+    
+</body>
+</html>
+

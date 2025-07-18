@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+.camera-section {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin: 20px auto;
+}
+
+#video,
+#canvas {
+  width: 100%;
+  height: auto;
+  background-color: #000;
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.controls {
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.results-section,
+.database-section {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#resultsContainer,
+#databaseContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.face-card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 150px;
+}
+
+.face-card img {
+  width: 100%;
+  height: auto;
+}
+
+.criminal {
+  border-color: red;
+}
+
+.safe {
+  border-color: green;
+}
+
+input,
+select {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+#imageUpload {
+  display: block;
+  margin-bottom: 10px;
+}
+
