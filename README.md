@@ -1,64 +1,190 @@
-Step 1: Check If Node.js Is Installed
+# 🕵️‍♂️ Criminal Face Recognition System – AI-Powered Surveillance
 
-   1. Open VS Code.
+A real-time AI-powered **Criminal Face Recognition System** designed for smart surveillance and public safety. It uses face detection and face recognition algorithms to identify criminals from a local database using a webcam or phone camera and sends alerts when a match is found.
 
-   2. Open the Terminal in VS Code (Ctrl + ` or View > Terminal).
+---
 
-   3. Type the following command and press Enter:
+## 🚀 Key Features
 
-         node -v
+- 🎥 **Live Face Detection** via webcam (PC or mobile)
+- 🧠 **Local Face Recognition System** – No internet/API required
+- ⚠️ **Criminal Alert System** – Visual + audible + SMS notification
+- 📲 **Mobile Camera Compatibility** – Supports front and rear
+- 📁 **Local Criminal Face Database**
+- 🔊 **Alarm Sound** on criminal detection
+- 📝 **Add Notes** in database for each entry
+- 🔐 **Optimized for Real-World Use**
 
-      If Node.js is installed, it will return a version like:
+---
 
-         v18.16.0
+## 📸 How It Works
 
-      If not, proceed to Step 2.
+1. The system opens your camera stream.
+2. It scans for faces in real time using **OpenCV + deep learning**.
+3. Matches faces with local database using **face encodings**.
+4. If a match is found and labeled as “criminal”:
+   - An alert message is shown
+   - Alarm sound is triggered
+   - SMS or notification can be triggered to the authority
+5. If the match is labeled as "safe", no alarm is triggered.
 
-   4. Check if npm is installed:
+---
 
-         npm -v
+## 🧪 Technologies Used
 
-      It should return a version like:
+- **Frontend:** HTML, CSS, JavaScript (for UI if any)
+- **Backend:** Python
+- **Libraries:** OpenCV, face_recognition, NumPy, playsound
+- **Storage:** Local Face Images (JPG/PNG in folders), optional JSON/CSV
+- **Notification:** SMS trigger (optional Twilio/SMTP setup)
 
-         9.5.1
+---
 
+## 🛠️ Installation & Setup
 
+### 1. Clone the Repository
 
-Step 2: Install Node.js (If Not Installed)
+```bash
+git clone https://github.com/Nadeem-mohammad0021/criminal-face-recognition.git
+cd criminal-face-recognition
+````
 
-  If Node.js is missing, install it:
+### 2. Create and Activate Virtual Environment
 
+```bash
+python -m venv venv
+source venv/bin/activate           # Windows: venv\Scripts\activate
+```
 
-   1. Download Node.js from the official website ( https://nodejs.org/en ).
-     Choose the LTS (Long-Term Support) version for stability.
+### 3. Install Required Libraries
 
-   2. Run the installer and make sure to check "Add to PATH" during installation.
+```bash
+pip install -r requirements.txt
+```
 
-   3. Restart VS Code after installation.
+If `requirements.txt` is missing, install manually:
 
+```bash
+pip install opencv-python face_recognition numpy playsound
+```
 
-Step 3: Restart VS Code & Verify npm
- 
-  After restarting, open VS Code Terminal and run:
+### 4. Run the Application
 
-         npm -v
+```bash
+python main.py
+```
 
-  If npm works, go to your project folder and run:
+---
 
-         npm run start
+## 📁 Project Structure
 
+```
+criminal-face-recognition/
+├── known_faces/
+│   ├── person1_safe.jpg
+│   ├── person2_criminal.jpg
+│   └── ...
+├── images/
+├── static/
+├── templates/
+├── main.py
+├── camera.py
+├── database.py
+├── utils.py
+├── requirements.txt
+└── README.md
+```
 
+---
 
-🔧 Fix the Issue
+## 📂 Face Database Format
 
-Try one of these solutions:
+Place images of known individuals in `known_faces/`.
+Filename convention:
 
-    1. Force Install (Quick Fix)
- 
-   Run:  npm install next --legacy-peer-deps
+* `name_safe.jpg` → marked as **Safe**
+* `name_criminal.jpg` → marked as **Criminal**
 
-         npm run build
+System uses filenames to determine alert conditions.
 
-         npm run start
+---
 
+## 🔔 Alert System
 
+* ✅ **Safe Person**: Detection with no alert
+* ❌ **Criminal**:
+
+  * System shows red alert on screen
+  * Alarm sound is triggered
+  * Can be extended to send SMS/email alerts to police or family
+
+---
+
+## 📱 Mobile & Real-World Ready
+
+* 📷 Supports rear camera if accessed via mobile browser or connected via IP camera
+* ⚡ Lightweight & optimized for minimal lag
+* ✅ Cross-platform compatible
+
+---
+
+## 🔐 Privacy & Ethics
+
+* All data is stored and processed **locally**.
+* No cloud uploading or third-party services unless configured (e.g., SMS).
+* This tool is intended for **educational and surveillance use** only.
+
+---
+
+## 🧠 Future Enhancements
+
+* 📡 Integration with police or criminal records database
+* ☁️ Cloud-based dashboard for remote monitoring
+* 🧾 Admin panel for face uploads, edits, and notes
+* 📲 Android mobile app version
+
+---
+
+## 📌 Limitations
+
+* Requires proper lighting and front-facing image for best accuracy
+* Can falsely identify people if low-resolution or side face
+* Meant to **assist**, not replace, human verification
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome!
+
+### To Contribute:
+
+```bash
+1. Fork the repo
+2. Create a new branch: git checkout -b feature-name
+3. Make your changes and commit: git commit -m "Description"
+4. Push to the branch: git push origin feature-name
+5. Open a pull request
+```
+
+---
+
+## 📬 Contact
+
+**👤 Nadeem Mohammad**
+📧 [nadeem.mohammad0021@gmail.com](mailto:nadeem.mohammad0021@gmail.com)
+🔗 [GitHub Profile](https://github.com/Nadeem-mohammad0021)
+
+---
+
+> 🔍 Built for smarter surveillance and public safety using AI.
+>
+> ⚠️ Use responsibly with full compliance to local laws and privacy policies.
+
+```
