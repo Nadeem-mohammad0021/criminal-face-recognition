@@ -151,13 +151,6 @@ System uses filenames to determine alert conditions.
 * Can falsely identify people if low-resolution or side face
 * Meant to **assist**, not replace, human verification
 
----
-
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
 
 ## 🤝 Contributing
 
